@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: whatsapp-rh-assistant
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+      - key: OPENAI_MODEL
+        value: gpt-6-luna
+      - key: META_GRAPH_VERSION
+        value: v26.0
+      - key: BOT_NAME
+        value: Asistente de Recursos Humanos
+      - key: COMPANY_NAME
+        value: TU_EMPRESA
+      - key: BUSINESS_CONTEXT
+        value: Sustituye este texto por la información vigente de RH: vacantes, sueldos, turnos, rutas, ubicación, requisitos, prestaciones y proceso de contratación. No inventes datos que no estén aquí.
+      - key: BOT_RULES
+        value: Responde en español de México, breve y claro. No inventes información. Si falta un dato, indica que RH lo confirmará. Si el usuario pide hablar con una persona, indica que RH continuará la conversación.
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: META_ACCESS_TOKEN
+        sync: false
+      - key: META_PHONE_NUMBER_ID
+        sync: false
+      - key: META_VERIFY_TOKEN
+        sync: false
+      - key: META_APP_SECRET
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false

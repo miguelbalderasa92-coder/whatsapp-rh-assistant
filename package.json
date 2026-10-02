@@ -1,0 +1,15 @@
+{
+  "name": "whatsapp-rh-assistant-render",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Asistente de WhatsApp Business para RH: Meta Cloud API + OpenAI Responses API + Render",
+  "engines": {"node": ">=20"},
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
